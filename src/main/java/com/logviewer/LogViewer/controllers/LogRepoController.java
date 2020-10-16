@@ -36,8 +36,8 @@ public class LogRepoController {
     }
 
     @GetMapping("/delete")
-    public ResponseEntity<LogRepository> removeLogRepo(@RequestParam Long id) {
-        LogRepository logRepository = logRepoRepository.findById(id).orElseThrow(() -> new RuntimeException("Repo " + id + " is not exixts"));
+    public ResponseEntity<LogRepository> removeLogRepo(@RequestParam String id) {
+        LogRepository logRepository = logRepoRepository.findById(id).orElseThrow(() -> new RuntimeException(String.format("Repo %s is not exixts", id)));
         logRepoRepository.delete(logRepository);
         return ResponseEntity.ok(logRepository);
     }

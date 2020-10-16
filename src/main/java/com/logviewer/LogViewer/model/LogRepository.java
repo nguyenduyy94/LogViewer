@@ -9,9 +9,6 @@ import javax.persistence.Id;
 @Entity
 @Data
 public class LogRepository {
-
-    @Id @GeneratedValue
-    Long id;
-
+    @Id
     String absolutePath;
 }
