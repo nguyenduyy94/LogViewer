@@ -8,10 +8,13 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class LogRepository {
-
+public class LogRecord {
     @Id @GeneratedValue
     Long id;
 
+    String text;
+
     String absolutePath;
+
+    Long lineNumber;
 }

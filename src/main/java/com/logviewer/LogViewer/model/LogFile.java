@@ -8,9 +8,10 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class LogRepository {
+public class LogFile {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     Long id;
 
     String absolutePath;
